@@ -5,7 +5,8 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/hack.css">
   <link rel="stylesheet" href="css/solarized-dark.css">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/invention.js"></script>
   <meta charset="utf-8">
   <title>Invention Supply</title>
 </head>
@@ -13,16 +14,23 @@
   <div class="container">
     <h1>Welcome to invention supply.</h1>
     <p>We're using <a href="https://github.com/jcjohnson/torch-rnn">torch-rnn</a> to build a bot that will generate inventions, ready for the intrepid inventor to build.</p>
-    <p>By <a href="http://bjoernkarmann.dk/">Bjørn</a> and <a href="https://charliegedeon.com">Charlie</a></p>
-    <div><script type="text/javascript">
-    $.getJSON("https://github.com/charlesgedeon/invention-supply/blob/master/get_wikipedia_inventions/data/inventions.json", function(data){
-        $.each(data.content, function(i, field){
-            <!-- data here -->
-        });
-    });
-    </script></div>
+    <div class="grid">
+      <div class="cell -9of12">
+        <div class="card invention-card">
+          <header class="card-header invention-title">Invention title</header>
+          <div class="card-content invention-content">
+            <div class="inner">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, quas ex vero enim in doloribus officiis ullam vel nam esse sapiente velit incidunt. Eaque quod et, aut maiores excepturi sint.</div>
+          </div>
+        </div>
+      </div>
+      <div class="cell -3of12">
+        <button class="btn btn-primary btn-ghost invention-generate">Generate</button>
+      </div>
+
+    </div>
     <footer class="t-hackcss-footer">
       <hr>
+      <p>By <a href="http://bjoernkarmann.dk/">Bjørn</a> and <a href="https://charliegedeon.com">Charlie</a></p>
       <div class="grid t-hackcss-sm-reversed-grid">
         <div class="cell -5of12">
           <span class="t-hackcss-social">
