@@ -26,7 +26,7 @@ void setup() {
           json.setInt("id",id_count);
           json.setString("head", split[i]);
           json.setString("text", split[i+1]);
-          json.setString("meening", "");
+          json.setInt("num", 0);
           
           values.setJSONObject(id_count, json);
         }

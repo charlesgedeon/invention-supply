@@ -10,6 +10,7 @@ var load = 0;
 var fade = 0;
 var time = 0;
 var click = false;
+var id = 0;
 
 function setup() {
 	
@@ -19,9 +20,12 @@ function setup() {
 function draw() {
 
 	var invent_button = document.getElementById("invent_button");
-	invent_button.addEventListener("click", doSomething);
+	var submit_button = document.getElementById("submit");
 	var display = document.getElementById("display_invention");
 	var loading = document.getElementById("display_loading");
+	
+	invent_button.addEventListener("click", clickEvent);
+	submit_button.addEventListener("click", submitEvent);
 	
 	if(click){
 		
@@ -43,38 +47,39 @@ function draw() {
 			display.style.display = "none";
 			display.style.opacity = "0";
 			fade = 0;
-			loadJSON("data/inventions_small.json", drawData);
+			loadJSON("data/inventions_1000.json", drawData);
 		}
 		load++;
 	}
 }
 
-function doSomething() {
+function clickEvent() {
+	id = int(random(20));
 	time = random(100,400);
 	click = true;	
 }
 
+function submitEvent() {
 	
-
+}	
 
 
 function drawData(data){
 	
 	var h_head = document.getElementById("head");
 	var h_text = document.getElementById("text");
-	var p_stat = document.getElementById("stat");
-	
-	
-	var number = int(random(33));	
-	var invention = data[number];
+	var invention = data[id];
 	head = invention["head"];
 	text = invention["text"];
-	stat = invention["meening"];
 	
 	h_head.innerHTML = head;
-	h_text.innerHTML = text;
-
-	p_stat.innerHTML = stat;
+	h_text.innerHTML = text;	
+	
+	$('meta[property="og:title"]').remove();
+	$('meta[property="og:description"]').remove();
+	
+	$("head").append('<meta property="og:title" content="'+head+'">');
+	$("head").append('<meta property="og:description" content="'+text+'">');
 }
 
 
