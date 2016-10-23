@@ -1,0 +1,48 @@
+body {
+	padding: 0; 
+	margin: 0;
+	overflow-x: hidden;
+	background-color: #fff31c;  		
+} 
+
+p{
+	font-family: 'Merriweather', serif;
+}
+
+h1{
+	font-family: 'Merriweather', serif;
+	font-weight: bold;
+	font-size: 24pt;
+}
+
+h2{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 500;
+	font-size: 14pt;
+}
+
+#display_invention{
+	
+	position: relative;
+	margin: 100 auto 0 auto;
+	width: 500px;
+	opacity: 0;
+}
+
+#display_loading{
+	
+	position: relative;
+	margin: 100 auto 0 auto;
+	width: 500px;
+	opacity: 0;
+}
+
+
+#invent_button{
+	margin: 100 auto 0 auto;
+	background: black;
+	width: 80px;
+	padding: 10px;
+	color: white;
+	cursor: pointer;
+}
