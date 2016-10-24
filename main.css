@@ -1,9 +1,10 @@
 body {
-	padding: 0; 
-	margin: 0;
+	padding: 0px; 
+	margin: 20px;
 	overflow-x: hidden;
-	background-color: #fff55e;  		
+	background-color: #FEFBEA;  		
 } 
+/* #fff55e */
 
 p{
 	font-family: 'Merriweather', serif;
@@ -18,7 +19,7 @@ h1{
 h2{
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 500;
-	font-size: 14pt;
+	font-size: 12pt;
 }
 
 #display_invention{
@@ -37,6 +38,14 @@ h2{
 	opacity: 0;
 }
 
+#introduction{
+	position: relative;
+	margin: 200 auto 0 auto;
+	width: 600px;
+	height: 200px;
+	opacity: 1;
+	
+}
 
 #invent_button{
 	margin: 100 auto 0 auto;
@@ -55,24 +64,4 @@ h2{
 	padding: 10px;
 	color: white;
 	cursor: pointer;
-}
-
-ul.share-buttons{
-  list-style: none;
-  padding: 0;
-}
-
-ul.share-buttons li{
-  display: inline;
-}
-
-ul.share-buttons .sr-only {
-  position: absolute;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
 }
