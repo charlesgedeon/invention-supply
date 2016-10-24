@@ -54,7 +54,7 @@ function draw() {
 			loading.style.opacity = load*0.05;
 			
 			if(load == 10){
-				loadJSON("data/inventions_1000.json", drawData);
+				loadJSON("data/inventions.json", drawData);
 			}
 			
 			if(load > time) {
@@ -88,8 +88,8 @@ function draw() {
 }
 
 function clickEvent() {
-	id = int(random(20));
-	time = random(100,400);
+	id = int(random(6429));
+	time = random(200,600);
 	click = true;		
 }
 
